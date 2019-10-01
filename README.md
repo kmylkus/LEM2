@@ -1,1 +1,1 @@
-# LEM2
+# LEM2 algorytm implementaion in C#
