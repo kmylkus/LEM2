@@ -1,0 +1,80 @@
+﻿<Window x:Class="LEM2Interface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LEM2Interface"
+        mc:Ignorable="d"
+        Title="LEM2 Interface" Height="404" Width="601">
+    <Grid>
+        <TabControl SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Name="tbItem_Algorithm">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Height="10" Width="10" Fill="Green" />
+                        <TextBlock Margin="3">Algorithm</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel Margin="8">
+                        <TextBlock Text="Step 1: Select the file to identify rules"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Name="txt_FileName" Grid.Column="0" Margin="0,5,5,5" Text="File name"/>
+                            <Button Name="btn_OpenFile" Grid.Column="1" Margin="0,5" Content="Open file" Click="btn_OpenFile_Click"/>
+                        </Grid>
+                        <Button Name="btn_StartLem2" IsEnabled="False" Margin="0,0,0,5" Content="Define the rules" Click="btn_StartLem2_Click"></Button>
+                        <TextBox Name="txt_Rules" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" AcceptsReturn="True" MinHeight="150" MaxHeight="200" Height="226"/>
+                        <TextBlock Name="text_ErrorCount" Height="16"/>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Name="tbItem_Classifier" IsEnabled="False" >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="10" Width="10" Fill="Purple" />
+                        <TextBlock Margin="3">Classifier</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Name="sp_ClassifierMain" Margin="8">
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Name="tbItem_Classyfi_test"  IsEnabled="False" >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="10" Width="10" Fill="Red" />
+                        <TextBlock Margin="3">Classifier Test</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,3,-32">
+
+                        <StackPanel Name="sp_Classify_test" Margin="8">
+                            <TextBlock Text="Step 2: Select the test file."/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBox Name="test_FileName" Grid.Column="0" Margin="0,5,5,5" Text="File name"/>
+                                <Button Name="btn_OpenTestFile" Grid.Column="1" Margin="0,5" Content="Open file" Click="btn_OpenTestFile_Click" />
+                            </Grid>
+                            <Button Name="btn_StartLem2test" IsEnabled="False" Margin="0,0,0,5" Content="Start classifier test" Click="btn_StartLem2Test_Click"></Button>
+                            <TextBox Name="txt_testResult" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" AcceptsReturn="True" MinHeight="150" MaxHeight="200" Height="228" Width="562"/>
+                            <TextBlock Name="text_ResultCount" Height="16"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem.Content>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>

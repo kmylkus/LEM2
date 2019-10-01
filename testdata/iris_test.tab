@@ -1,0 +1,23 @@
+< n n n n d >
+
+[ Sepal_length
+  sepal_width
+  petal_length
+  petal_width
+  decyzja ]
+
+5.5000          2.4000          3.7000          1.0000          Iris-versicolor 
+6.1000          3.0000          4.9000          1.8000          Iris-virginica  
+6.0000          2.2000          5.0000          1.5000          Iris-virginica  
+6.9000          3.1000          5.4000          2.1000          Iris-virginica  
+7.3000          2.9000          6.3000          1.8000          Iris-virginica  
+6.4000          3.1000          5.5000          1.8000          Iris-virginica  
+7.0000          3.2000          4.7000          1.4000          Iris-versicolor 
+6.3000          3.3000          6.0000          2.5000          Iris-virginica  
+4.4000          2.9000          1.4000          0.2000          Iris-setosa     
+5.0000          3.3000          1.4000          0.2000          Iris-setosa     
+6.1000          2.8000          4.7000          1.2000          Iris-versicolor 
+6.7000          3.3000          5.7000          2.5000          Iris-virginica  
+7.7000          3.8000          6.7000          2.2000          Iris-virginica  
+5.9000          3.2000          4.8000          1.8000          Iris-versicolor 
+5.6000          2.9000          3.6000          1.3000          Iris-versicolor 
